@@ -1,0 +1,35 @@
+<<<<<<< HEAD
+﻿{
+    "files":  [
+
+              ],
+    "references":  [
+                       {
+                           "path":  "./tsconfig.app.json"
+                       },
+                       {
+                           "path":  "./tsconfig.node.json"
+                       }
+                   ],
+    "compilerOptions":  {
+
+                        }
+}
+=======
+﻿{
+    "files":  [
+
+              ],
+    "references":  [
+                       {
+                           "path":  "./tsconfig.app.json"
+                       },
+                       {
+                           "path":  "./tsconfig.node.json"
+                       }
+                   ],
+    "compilerOptions":  {
+
+                        }
+}
+>>>>>>> 19ccd18a83949ea4943a2c36726d2356224b1dab
