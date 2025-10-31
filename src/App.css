@@ -1,0 +1,461 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.landing {
+  height: 100vh;
+  background: url('/public/Background.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Logo animation */
+.logo {
+  position: absolute;
+  width: 230px;
+  height: auto;
+  left: 10px;
+  top: 5px;   
+  filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.25));
+}
+
+.animate-logo {
+  opacity: 0;
+  animation: slideDown 1.5s forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.explore {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Stalemate', cursive;
+  font-weight: 400;
+  font-size: 70px;
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 80%;
+  opacity: 0;
+}
+
+.animate-text {
+  animation: fadeSlideIn 2s forwards;
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.next-page {
+  transform: translateY(100%); 
+  transition: transform 0.7s ease-out;
+}
+
+.next-page.slide-in {
+  transform: translateY(0); 
+}
+
+
+/* 🔹 Background + form placement */
+.login-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  background-image: url('./Images/bg-login.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-right: 120px;  
+  padding-left: 90px;
+  box-sizing: border-box;
+}
+
+/* 🔹 Login form box */
+.login-form {
+  background: rgba(156, 152, 152, 0.9);
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🔹 Login title */
+.login-title {
+  text-align: left;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* 🔹 Labels and inputs */
+.login-form label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.login-form input:focus {
+  border-color: #f5f1f0;
+  box-shadow: 0 0 6px rgba(255, 126, 95, 0.5);
+}
+
+/* 🔹 Forgot Password */
+.forgot-password {
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.forgot-password a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+}
+
+/* 🔹 Sign In button */
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.6);
+}
+
+/* 🔹 Divider text */
+.or-divider {
+  text-align: center;
+  margin: 20px 0;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  position: relative; 
+}
+
+.or-divider::before,
+.or-divider::after {
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.or-divider::before {
+  left: 0;
+}
+
+.or-divider::after {
+  right: 0;
+}
+
+/* 🔹 Social login (round small buttons) */
+.social-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Circle buttons */
+.social-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #ffffff !important;
+}
+
+/* Pop effect on hover */
+.social-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  background-color: #f5f5f5 !important;
+}
+
+/* Google button */
+.google-btn {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+}
+
+.google-btn:hover {
+  background-color: #f5f5f5;
+}
+
+/* Facebook button */
+.facebook-btn {
+  background-color: #ffffff;
+  color: white;
+}
+
+.facebook-btn:hover {
+  background-color: #ffffff;
+}
+
+/* Social icons */
+.social-btn img {
+  width: 22px;
+  height: 22px;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.register-link a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+/* 🔹 Register Page */
+.register-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+  padding-right: 130px;  
+  padding-left: 100px;
+  box-sizing: border-box;
+  background-image: url('./Images/bg-register.jpeg'); /* Your background image */
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+/* Optional overlay for readability */
+.register-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 0;
+}
+
+/* 🔹 Register form */
+.register-form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Above overlay */
+  z-index: 1;
+}
+
+/* 🔹 Form title */
+.register-form .login-title {
+  text-align: left;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* 🔹 Labels and inputs */
+.register-form label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.register-form input:focus {
+  border-color: #ff7e5f;
+  box-shadow: 0 0 6px rgba(255, 126, 95, 0.5);
+}
+
+/* 🔹 Register button */
+.register-form button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.register-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.6);
+}
+
+/* 🔹 Divider */
+.or-divider {
+  text-align: center;
+  margin: 20px 0;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  position: relative;
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.or-divider::before {
+  left: 0;
+}
+
+.or-divider::after {
+  right: 0;
+}
+
+/* 🔹 Social login buttons */
+.social-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #ffffff !important;
+}
+
+.social-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  background-color: #f5f5f5 !important;
+}
+
+.google-btn {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+}
+
+.google-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.facebook-btn {
+  background-color: #ffffff;
+}
+
+.facebook-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.social-btn img {
+  width: 22px;
+  height: 22px;
+}
+
+/* 🔹 Register link */
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.register-link a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
