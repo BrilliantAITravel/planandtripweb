@@ -22,5 +22,5 @@ jobs:
       uses: google-github-actions/upload-cloud-storage@v2
       with:
         path: '.' # The local path in your repo to upload; '.' means the root of your repo
-        destination: 'your-bucket-name' # Replace with your GCS bucket name
+        destination: 'ftdpublic' # Replace with your GCS bucket name
         parent: false # Optional: Set to false to upload contents to the bucket root
